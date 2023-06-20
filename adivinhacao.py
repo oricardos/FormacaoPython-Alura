@@ -6,8 +6,9 @@ print('**********************************')
 
 secret_number = random.randrange(0, 101)
 total_attempt = 0
+points = 1000
 
-print('Escolha o nível do Jogo')
+print('Escolha o nível do Jogo', secret_number)
 print('(1) Fácil (2) Médio (3) Difícil')
 
 level = int(input('Selecione um nível: '))
@@ -32,7 +33,7 @@ for round_game in range(1, total_attempt + 1):
     
     if attempt == secret_number:
         print('**********************************')
-        print("Parabens, você acertou!")
+        print("Parabens, você acertou! Seus pontos foram: {}".format(points))
         print('**********************************')
         break
     else:
@@ -46,5 +47,8 @@ for round_game in range(1, total_attempt + 1):
             print("Você digitou: ", attempt)
             print('O número secreto é maior do que o número que você tentou')
             print('**********************************')
+        
+        lost_points = abs(secret_number - attempt)
+        points = points - lost_points
 
 print('Fim de Jogo')
