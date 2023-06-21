@@ -4,3 +4,7 @@ def hangman_game():
     print('**********************************')
 
     print('Fim de Jogo!')
+
+
+if __name__ == '__main__':
+    hangman_game()

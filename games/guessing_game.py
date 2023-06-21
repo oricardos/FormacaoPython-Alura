@@ -1,5 +1,6 @@
 import random
 
+
 def guessing_game():
     print('**********************************')
     print('Bem vindo ao jogo de adivinhação!')
@@ -31,7 +32,7 @@ def guessing_game():
             print("Você deve digitar um número entre 1 e 100")
             print('**********************************')
             continue
-        
+
         if attempt == secret_number:
             print('**********************************')
             print("Parabens, você acertou! Seus pontos foram: {}".format(points))
@@ -48,8 +49,12 @@ def guessing_game():
                 print("Você digitou: ", attempt)
                 print('O número secreto é maior do que o número que você tentou')
                 print('**********************************')
-            
+
             lost_points = abs(secret_number - attempt)
             points = points - lost_points
 
     print('Fim de Jogo')
+
+
+if __name__ == '__main__':
+    guessing_game()

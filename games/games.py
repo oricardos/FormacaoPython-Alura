@@ -1,17 +1,23 @@
 import hangman_game
 import guessing_game
 
-print('**************************************')
-print('*** Escolha qual jogo deseja jogar ***')
-print('**************************************')
 
-print('(1) - Forca | (2) - Adivinhação')
+def choose_game():
+    print('**************************************')
+    print('*** Escolha qual jogo deseja jogar ***')
+    print('**************************************')
 
-game = int(input('Qual jogo  vai ser hoje?'))
+    print('(1) - Forca | (2) - Adivinhação')
 
-if game == 1:
-    print('*** Forca selecionado ***')
-    hangman_game.hangman_game()
-else:
-    print('*** Adivinhação Selecionado ***')
-    guessing_game.guessing_game()
+    game = int(input('Qual jogo  vai ser hoje?'))
+
+    if game == 1:
+        print('*** Forca selecionado ***')
+        hangman_game.hangman_game()
+    else:
+        print('*** Adivinhação Selecionado ***')
+        guessing_game.guessing_game()
+
+
+if __name__ == '__main__':
+    choose_game()
